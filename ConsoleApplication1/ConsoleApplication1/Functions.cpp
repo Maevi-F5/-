@@ -6,19 +6,19 @@ void DataEntry(Data* (&d), int& n)
 	Years years;
 	Grade grade;
 
-	cout << "Ââåäèòå ğàçìåğ ìàññèâà: ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã° Ã¬Ã Ã±Ã±Ã¨Ã¢Ã : ";
 	cin >> n;
 
 	d = new Data[n];
 
 	for (int i = 0; i < n; i++) {
-		cout << "Ââåäèòå ÔÈÎ: ";
+		cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã”ÃˆÃ: ";
 		cin >> initials.surname >> initials.name >> initials.patrinymic;
 
-		cout << "Ââåäèòå âîçğàñò: ";
+		cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã®Ã§Ã°Ã Ã±Ã²: ";
 		cin >> years.age;
 
-		cout << "Ââåäèòå êëàññ: ";
+		cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ«Ã Ã±Ã±: ";
 		cin >> grade.year >> grade.letter;
 
 		d[i].DataEntry(initials, years, grade);
@@ -48,10 +48,10 @@ void DataReading(Data* (&d), int& n, string filename)
 			d[i].DataEntry(initials, years, grade);
 		}
 
-		cout << "Äàííûå ñ÷èòàíû" << endl;
+		cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã±Ã·Ã¨Ã²Ã Ã­Ã»" << endl;
 	}
 	else
-		cout << "Îøèáêà îòêğûòèÿ ôàéëà" << endl;
+		cout << "ÃÃ¸Ã¨Ã¡ÃªÃ  Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¿ Ã´Ã Ã©Ã«Ã " << endl;
 
 	reading.close();
 }
@@ -59,7 +59,7 @@ void DataReading(Data* (&d), int& n, string filename)
 void Print(Data* d, int n)
 {
 	for (int i = 0; i < n; i++) {
-		cout << "Äàííûå ¹" << i + 1 << endl;
+		cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Â¹" << i + 1 << endl;
 
 		d[i].Print();
 		cout << "_________________________________________\n";
@@ -73,24 +73,24 @@ void DataChange(Data* d, int n)
 	Grade grade;
 	int _n;
 
-	cout << "Ââåäèòå íîìåğ íóæíîãî ıëåìåíòà (îò 1 äî " << n << "): ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã­Ã³Ã¦Ã­Ã®Ã£Ã® Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  (Ã®Ã² 1 Ã¤Ã® " << n << "): ";
 	cin >> _n;
 	_n--;
 
 	if (_n >= 0 && _n < n) {
-		cout << "Ââåäèòå íîâûå ÔÈÎ: ";
+		cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã»Ã¥ Ã”ÃˆÃ: ";
 		cin >> initials.surname >> initials.name >> initials.patrinymic;
 
-		cout << "Ââåäèòå íîâûé âîçğàñò: ";
+		cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã»Ã© Ã¢Ã®Ã§Ã°Ã Ã±Ã²: ";
 		cin >> years.age;
 
-		cout << "Ââåäèòå íîâûé êëàññ: ";
+		cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã»Ã© ÃªÃ«Ã Ã±Ã±: ";
 		cin >> grade.year >> grade.letter;
 
 		d[_n].DataEntry(initials, years, grade);
 	}
 	else
-		cout << "Íîìåğ ââåä¸í íåâåğíî" << endl;
+		cout << "ÃÃ®Ã¬Ã¥Ã° Ã¢Ã¢Ã¥Ã¤Â¸Ã­ Ã­Ã¥Ã¢Ã¥Ã°Ã­Ã®" << endl;
 }
 
 void Copy(Data* d_n, Data* d_o, int n)
@@ -113,13 +113,13 @@ void AddData(Data* (&d), int& n)
 
 	Copy(d, buf, size);
 
-	cout << "Ââåäèòå íîâûå ÔÈÎ: ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã»Ã¥ Ã”ÃˆÃ: ";
 	cin >> initials.surname >> initials.name >> initials.patrinymic;
 
-	cout << "Ââåäèòå íîâûé âîçğàñò: ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã»Ã© Ã¢Ã®Ã§Ã°Ã Ã±Ã²: ";
 	cin >> years.age;;
 
-	cout << "Ââåäèòå íîâûé êëàññ: ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã»Ã© ÃªÃ«Ã Ã±Ã±: ";
 	cin >> grade.year >> grade.letter;
 
 	d[size].DataEntry(initials, years, grade);
@@ -134,7 +134,7 @@ void DeleteData(Data* (&d), int& n)
 	int _n;
 	Data* buf = new Data[n];
 
-	cout << "Ââåäèòå íîìåğ íóæíîãî ıëåìåíòà (îò 1 äî " << n << "): ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã­Ã³Ã¦Ã­Ã®Ã£Ã® Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  (Ã®Ã² 1 Ã¤Ã® " << n << "): ";
 	cin >> _n;
 	_n--;
 
@@ -152,10 +152,10 @@ void DeleteData(Data* (&d), int& n)
 			}
 		}
 
-		cout << "Äàííûå óäàëåíû" << endl;
+		cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã³Ã¤Ã Ã«Ã¥Ã­Ã»" << endl;
 	}
 	else
-		cout << "Íîìåğ ââåä¸í íåâåğíî" << endl;
+		cout << "ÃÃ®Ã¬Ã¥Ã° Ã¢Ã¢Ã¥Ã¤Â¸Ã­ Ã­Ã¥Ã¢Ã¥Ã°Ã­Ã®" << endl;
 
 	delete[] buf;
 }
@@ -177,5 +177,29 @@ void SortingData(Data* d, int n)
 		}
 	}
 
-	cout << "Äàííûå îòñîğòèğîâàíû" << endl << "Êîëè÷åñòâî ñîğòèğîâîê : " << numOfSorted << endl;
+	cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã®Ã²Ã±Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã»" << endl << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã±Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢Ã®Ãª : " << numOfSorted << endl;
+}
+
+void SaveData(Data* d, int n, string filename)
+{
+	ofstream record(filename);
+
+	if (record) {
+		record << n << endl;
+
+		for (int i = 0; i < n; i++) {
+			record << d[i].GetInitials().surname << " " << d[i].GetInitials().name << " " << d[i].GetInitials().patrinymic << endl;
+			record << d[i].GetYears().age << endl;
+			record << d[i].GetGrade().year << " " << d[i].GetGrade().letter << endl;
+
+			if (i < n - 1)
+				record << endl;
+		}
+
+		cout << "Ğ”Ğ°Ğ½Ğ½Ñ‹Ğµ ÑĞ¾Ñ…Ñ€Ğ°Ğ½ĞµĞ½Ñ‹ Ğ² Ñ„Ğ°Ğ¹Ğ»: " << filename << endl;
+	}
+	else
+		cout << "ĞÑˆĞ¸Ğ±ĞºĞ° Ğ¾Ñ‚ĞºÑ€Ñ‹Ñ‚Ğ¸Ñ Ñ„Ğ°Ğ¹Ğ»Ğ°" << endl;
+
+	record.close();
 }
