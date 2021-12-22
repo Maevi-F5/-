@@ -11,6 +11,7 @@ void Menu() {
         << "(4) Добавление данных" << endl
         << "(5) Удаление данных" << endl
         << "(6) Сортировка данных" << endl
+        << "(7) Сохранение данных" << endl
         << "Ваш выбор: ";
     cin >> _stateMenu;
 }
@@ -111,6 +112,22 @@ void main()
 
             if (_size != 0)
                 SortingData(d, _size);
+            else
+                cout << "Данные пусты" << endl;
+
+            system("pause");
+            system("cls");
+            Menu();
+            break;
+                
+         case 7:
+            system("cls");
+
+            if (_size != 0) {
+                cout << "Введите путь к файлу: ";
+                cin >> filename;
+                SaveData(d, _size, filename);
+            }
             else
                 cout << "Данные пусты" << endl;
 
